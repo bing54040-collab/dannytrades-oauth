@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — DannyTrades Signal Automation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #0a1628;
+        --navy-mid: #14243e;
+        --gold: #c9a84c;
+        --gold-light: #e4c97a;
+        --white: #fafaf8;
+        --text: #2d3a4a;
+        --text-muted: #6b7d93;
+        --border: #dde4ef;
+        --radius: 12px;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--white);
+        color: var(--text);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      /* HEADER */
+      .site-header {
+        background: var(--navy);
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .brand-icon {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+      .brand-name {
+        font-family: "DM Serif Display", serif;
+        color: var(--white);
+        font-size: 2.1rem;
+      }
+      .brand-name span {
+        color: var(--gold-light);
+      }
+      .last-updated {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.4);
+        letter-spacing: 0.04em;
+      }
+
+      /* HERO */
+      .hero {
+        background: linear-gradient(
+          160deg,
+          var(--navy) 0%,
+          var(--navy-mid) 55%,
+          #1a2f50 100%
+        );
+        padding: 80px 40px 72px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(
+            circle at 20% 50%,
+            rgba(201, 168, 76, 0.06) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(201, 168, 76, 0.04) 0%,
+            transparent 45%
+          );
+        pointer-events: none;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(201, 168, 76, 0.12);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        color: var(--gold-light);
+        font-size: 0.73rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 50px;
+        margin-bottom: 24px;
+        animation: fadeUp 0.5s ease both;
+      }
+      .hero h1 {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        color: var(--white);
+        line-height: 1.15;
+        margin-bottom: 16px;
+        animation: fadeUp 0.5s 0.1s ease both;
+      }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--gold-light);
+      }
+      .hero p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.05rem;
+        max-width: 500px;
+        margin: 0 auto 36px;
+        font-weight: 300;
+        animation: fadeUp 0.5s 0.2s ease both;
+      }
+      .hero-meta {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        flex-wrap: wrap;
+        animation: fadeUp 0.5s 0.3s ease both;
+      }
+      .hero-meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .hero-meta-item .label {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.35);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .hero-meta-item .value {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+      }
+
+      /* LAYOUT */
+      .page-wrap {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 64px 40px 100px;
+      }
+
+      /* TOC */
+      .toc {
+        background: #f4f6fb;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 28px 32px;
+        margin-bottom: 56px;
+      }
+      .toc-title {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+      }
+      .toc ol {
+        list-style: none;
+        counter-reset: toc;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 32px;
+      }
+      @media (max-width: 600px) {
+        .toc ol {
+          grid-template-columns: 1fr;
+        }
+      }
+      .toc ol li {
+        counter-increment: toc;
+      }
+      .toc ol li a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--navy);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 4px 0;
+        transition: color 0.2s;
+      }
+      .toc ol li a::before {
+        content: counter(toc, decimal-leading-zero);
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--gold);
+        min-width: 24px;
+        font-variant-numeric: tabular-nums;
+      }
+      .toc ol li a:hover {
+        color: var(--gold);
+      }
+
+      /* SECTION */
+      .section {
+        margin-bottom: 52px;
+        padding-bottom: 52px;
+        border-bottom: 1px solid var(--border);
+        scroll-margin-top: 80px;
+      }
+      .section:last-of-type {
+        border-bottom: none;
+      }
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 20px;
+      }
+      .section-num {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "DM Serif Display", serif;
+        font-size: 1rem;
+        color: var(--navy);
+        font-weight: 700;
+        margin-top: 2px;
+      }
+      .section-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.45rem;
+        color: var(--navy);
+        line-height: 1.25;
+      }
+      .section p {
+        color: #3d4f63;
+        margin-bottom: 12px;
+        font-size: 0.97rem;
+        font-weight: 300;
+      }
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* LISTS */
+      .data-list {
+        list-style: none;
+        margin: 16px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .data-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 0.95rem;
+        color: #3d4f63;
+        font-weight: 300;
+      }
+      .data-list li .dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+        margin-top: 8px;
+      }
+
+      /* CARDS */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        gap: 14px;
+        margin: 16px 0;
+      }
+      .card {
+        background: #f4f6fb;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px 18px;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .card-icon {
+        font-size: 1.35rem;
+        line-height: 1;
+        margin-top: 1px;
+      }
+      .card-name {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--navy);
+      }
+      .card-desc {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+
+      /* HIGHLIGHT */
+      .highlight {
+        background: linear-gradient(
+          135deg,
+          rgba(10, 22, 40, 0.03),
+          rgba(201, 168, 76, 0.05)
+        );
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        border-left: 4px solid var(--gold);
+        border-radius: 0 10px 10px 0;
+        padding: 18px 22px;
+        margin: 18px 0;
+        font-size: 0.92rem;
+        color: #3d4f63;
+        font-weight: 300;
+      }
+
+      /* TABLE */
+      .scope-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        font-size: 0.88rem;
+      }
+      .scope-table th {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 10px 16px;
+        text-align: left;
+      }
+      .scope-table td {
+        padding: 10px 16px;
+        border-bottom: 1px solid var(--border);
+        color: #3d4f63;
+      }
+      .scope-table tr:last-child td {
+        border-bottom: none;
+      }
+      .scope-table tr:nth-child(even) td {
+        background: #f9fafc;
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 50px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        min-width: 100px;
+      }
+      .badge-read {
+        background: #e8f5e9;
+        color: #2e7d32;
+      }
+      .badge-rw {
+        background: #e3f2fd;
+        color: #1565c0;
+      }
+
+      /* CONTACT */
+      .contact-strip {
+        background: var(--navy);
+        border-radius: var(--radius);
+        padding: 32px 36px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 56px;
+      }
+      .contact-strip p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        font-weight: 300;
+        margin: 0;
+      }
+      .contact-strip strong {
+        color: var(--white);
+        font-weight: 600;
+      }
+      .contact-strip a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        color: var(--navy);
+        font-weight: 700;
+        font-size: 0.88rem;
+        padding: 10px 22px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+      }
+      .contact-strip a:hover {
+        opacity: 0.85;
+      }
+
+      /* FOOTER */
+      footer {
+        background: var(--navy);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 24px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: Center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      footer p {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      footer a {
+        color: rgba(201, 168, 76, 0.7);
+        text-decoration: none;
+        font-size: 0.78rem;
+      }
+      footer a:hover {
+        color: var(--gold-light);
+      }
+
+      code {
+        background: rgba(201, 168, 76, 0.1);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-family: "Cascadia Code", "Fira Code", monospace;
+        font-size: 0.87em;
+        color: #5a4010;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .site-header {
+          padding: 0 20px;
+        }
+        .hero {
+          padding: 56px 24px 56px;
+        }
+        .page-wrap {
+          padding: 40px 24px 80px;
+        }
+        .contact-strip {
+          padding: 24px;
+        }
+        footer {
+          padding: 20px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <span class="brand-name">DannyTrades <span>Signal</span></span>
+      </a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-badge">🛡 Privacy Policy</div>
+      <h1>Your data, handled<br /><em>with care.</em></h1>
+      <p>
+        This policy explains exactly what we access, how we use it, and what we
+        never do with your information.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="label">App Name</span>
+          <span class="value">DannyTrades Signal Automation</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="label">Developer</span>
+          <span class="value">Nidhi</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="label">Contact</span>
+          <span class="value">bing54040@gmail.com</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-wrap">
+      <nav class="toc">
+        <div class="toc-title">Contents</div>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#data-access">Data We Access</a></li>
+          <li><a href="#data-use">How We Use Data</a></li>
+          <li><a href="#third-party">Third-Party Services</a></li>
+          <li><a href="#storage">Data Storage</a></li>
+          <li><a href="#sharing">Data Sharing</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#rights">User Rights</a></li>
+          <li><a href="#scope">Scope Justification</a></li>
+        </ol>
+      </nav>
+
+      <section class="section" id="overview">
+        <div class="section-header">
+          <div class="section-num">1</div>
+          <h2 class="section-title">Overview</h2>
+        </div>
+        <p>
+          DannyTrades Signal Automation is a private automation tool that
+          monitors authorized Gmail emails and Google Drive images to extract
+          structured trading signal data from DannyTrades Patreon research
+          emails.
+        </p>
+        <p>
+          The application operates exclusively within the boundaries of
+          permissions explicitly granted by the user via Google OAuth. It is
+          built for a single authorized user and processes only designated data
+          sources related to the DannyTrades signal intelligence pipeline.
+        </p>
+        <div class="highlight">
+          This tool does not collect, store, or monetize any personal data. All
+          processing is automated and occurs within authorized, secure service
+          boundaries only.
+        </div>
+      </section>
+
+      <section class="section" id="data-access">
+        <div class="section-header">
+          <div class="section-num">2</div>
+          <h2 class="section-title">Data We Access</h2>
+        </div>
+        <p>
+          The application requests access only to the following data, strictly
+          limited to what is necessary to perform its function:
+        </p>
+        <table class="scope-table">
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Access Level</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gmail emails (specific sender)</td>
+              <td><span class="badge badge-read">Read-Only</span></td>
+              <td>Extract DannyTrades Patreon signal emails</td>
+            </tr>
+            <tr>
+              <td>Google Drive images (designated folder)</td>
+              <td><span class="badge badge-read">Read-Only</span></td>
+              <td>Process chart images for visual signal extraction</td>
+            </tr>
+            <tr>
+              <td>Google Sheets (user-owned file)</td>
+              <td><span class="badge badge-rw">Read + Write</span></td>
+              <td>Write structured extracted data for user review</td>
+            </tr>
+            <tr>
+              <td>Google account email address</td>
+              <td><span class="badge badge-read">Read-Only</span></td>
+              <td>Identify the authorized account for OAuth</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          No other Gmail messages, Drive files, or account information outside
+          the above scope is accessed, read, or processed.
+        </p>
+      </section>
+
+      <section class="section" id="data-use">
+        <div class="section-header">
+          <div class="section-num">3</div>
+          <h2 class="section-title">How We Use Data</h2>
+        </div>
+        <p>
+          Data accessed through this application is used solely for the
+          following automated processing steps:
+        </p>
+        <ul class="data-list">
+          <li>
+            <span class="dot"></span>Ingesting incoming DannyTrades Patreon
+            emails from a dedicated Gmail inbox
+          </li>
+          <li>
+            <span class="dot"></span>Classifying email content type (ticker
+            signals, market commentary, trade calls, etc.)
+          </li>
+          <li>
+            <span class="dot"></span>Sending email body text to Claude AI for
+            structured JSON extraction of trading signal fields
+          </li>
+          <li>
+            <span class="dot"></span>Reading chart images from a designated
+            Google Drive folder for visual signal extraction via Claude Vision
+          </li>
+          <li>
+            <span class="dot"></span>Writing the extracted, structured data into
+            a Google Sheets dashboard owned and controlled by the user
+          </li>
+        </ul>
+        <p>
+          No data is used for advertising, profiling, analytics, or any purpose
+          beyond the above automated extraction workflow.
+        </p>
+      </section>
+
+      <section class="section" id="third-party">
+        <div class="section-header">
+          <div class="section-num">4</div>
+          <h2 class="section-title">Third-Party Services</h2>
+        </div>
+        <p>
+          The application integrates with the following services, each used only
+          within the described and authorized scope:
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">📬</div>
+            <div class="card-body">
+              <div class="card-name">Google APIs</div>
+              <div class="card-desc">
+                Gmail, Drive &amp; Sheets — for data reading and output writing
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">⚙️</div>
+            <div class="card-body">
+              <div class="card-name">Make.com</div>
+              <div class="card-desc">
+                Automation workflows that orchestrate the pipeline
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🤖</div>
+            <div class="card-body">
+              <div class="card-name">Anthropic Claude API</div>
+              <div class="card-desc">
+                AI text and image processing for signal extraction
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📈</div>
+            <div class="card-body">
+              <div class="card-name">Yahoo Finance</div>
+              <div class="card-desc">
+                Daily market closing prices for tracked tickers
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          All third-party services are governed by their own privacy policies.
+          No credentials or raw user data are shared beyond what is required by
+          each service's authorized API agreement.
+        </p>
+      </section>
+
+      <section class="section" id="storage">
+        <div class="section-header">
+          <div class="section-num">5</div>
+          <h2 class="section-title">Data Storage</h2>
+        </div>
+        <p>
+          Raw email content and chart images are processed transiently and are
+          not permanently stored by the application or its developer.
+        </p>
+        <ul class="data-list">
+          <li>
+            <span class="dot"></span>Email bodies are passed to Claude API for
+            extraction and are not retained after processing completes
+          </li>
+          <li>
+            <span class="dot"></span>Chart images are read from Google Drive and
+            processed via Claude Vision; image data is not saved to any external
+            location
+          </li>
+          <li>
+            <span class="dot"></span>Only the
+            <strong>extracted structured data</strong> (candle signals, price
+            levels, narratives, whale accumulation, etc.) is permanently stored
+            — in a Google Sheets file owned and controlled entirely by the user
+          </li>
+        </ul>
+        <div class="highlight">
+          The only persistent storage is your own Google Sheets file. You retain
+          full ownership and control over that data at all times.
+        </div>
+      </section>
+
+      <section class="section" id="sharing">
+        <div class="section-header">
+          <div class="section-num">6</div>
+          <h2 class="section-title">Data Sharing</h2>
+        </div>
+        <p>
+          We do not sell, rent, trade, or share your data with any third parties
+          for commercial or non-operational purposes.
+        </p>
+        <ul class="data-list">
+          <li>
+            <span class="dot"></span>No data is sold to advertisers or data
+            brokers
+          </li>
+          <li>
+            <span class="dot"></span>No data is shared with any party outside
+            the authorized services listed in Section 4
+          </li>
+          <li>
+            <span class="dot"></span>Processing occurs only within authorized
+            services under standard API agreements
+          </li>
+          <li>
+            <span class="dot"></span>The developer does not retain, view, or
+            review your email content or extracted trading data
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="security">
+        <div class="section-header">
+          <div class="section-num">7</div>
+          <h2 class="section-title">Security</h2>
+        </div>
+        <p>
+          The following security practices are applied throughout this
+          application:
+        </p>
+        <ul class="data-list">
+          <li>
+            <span class="dot"></span>Only the minimum required OAuth scopes are
+            requested — gmail.readonly, drive.readonly, and Sheets access
+          </li>
+          <li>
+            <span class="dot"></span>No credentials, passwords, or API keys are
+            manually stored or exposed in application code
+          </li>
+          <li>
+            <span class="dot"></span>All data transmission occurs over encrypted
+            HTTPS connections via authorized APIs
+          </li>
+          <li>
+            <span class="dot"></span>OAuth access can be revoked at any time
+            from your Google Account without any action required from the
+            developer
+          </li>
+          <li>
+            <span class="dot"></span>Email deduplication hashing (MD5/SHA-256)
+            prevents reprocessing, reducing unnecessary data exposure
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="rights">
+        <div class="section-header">
+          <div class="section-num">8</div>
+          <h2 class="section-title">User Rights</h2>
+        </div>
+        <p>
+          As the authorized user, you retain full rights over your data and
+          application access at all times:
+        </p>
+        <ul class="data-list">
+          <li>
+            <span class="dot"></span><strong>Data deletion:</strong> Delete your
+            Google Sheets output file at any time to permanently remove all
+            extracted data
+          </li>
+          <li>
+            <span class="dot"></span><strong>Inspection:</strong> Review all
+            data written by the application directly within your Google Sheets
+            dashboard
+          </li>
+          <li>
+            <span class="dot"></span><strong>Contact:</strong> Reach the
+            developer at any time to request information about data handling or
+            to request changes
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="scope">
+        <div class="section-header">
+          <div class="section-num">9</div>
+          <h2 class="section-title">Scope Justification</h2>
+        </div>
+        <p>
+          This application requests the <code>drive.readonly</code> Google OAuth
+          scope for the following specific and limited purpose:
+        </p>
+        <div class="highlight">
+          The Make.com "Watch Image" module monitors a designated Google Drive
+          folder (<em>DannyTrades_Charts</em>) to detect newly uploaded chart
+          images. When a new image is found, it is read and passed to the
+          Anthropic Claude Vision API for visual trading signal extraction —
+          identifying candle type, ribbon state, POC color, and whale
+          accumulation percentage. The extracted values are written to the
+          user's Google Sheets dashboard only.
+        </div>
+        <p>
+          The <code>drive.readonly</code> scope is the minimum necessary for
+          this functionality. The application:
+        </p>
+        <ul class="data-list">
+          <li>
+            <span class="dot"></span>Only monitors a single, user-designated
+            folder — not the full Google Drive
+          </li>
+          <li>
+            <span class="dot"></span>Only reads image files — no documents,
+            spreadsheets, or other Drive content is accessed
+          </li>
+          <li>
+            <span class="dot"></span>Does not modify, delete, move, or share any
+            Drive files
+          </li>
+          <li>
+            <span class="dot"></span>Does not store or transmit Drive content
+            beyond the single Claude Vision API call required for extraction
+          </li>
+          <li>
+            <span class="dot"></span>Uses read-only access exclusively — no
+            write permissions to Google Drive are requested
+          </li>
+        </ul>
+        <p>
+          This scope is essential to enable automated chart image processing, a
+          core feature of the DannyTrades signal extraction pipeline that cannot
+          be achieved without Drive read access.
+        </p>
+      </section>
+
+      <div class="contact-strip">
+        <div>
+          <p><strong>Questions about this policy?</strong></p>
+          <p>
+            Contact the developer directly with any privacy concerns or data
+            requests.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        © 2026 DannyTrades Signal Automation &nbsp;·&nbsp; Nidhi &nbsp;·&nbsp;
+        Private Use Application
+      </p>
+      <p>bing54040@gmail.com</p>
+    </footer>
+  </body>
+</html>
